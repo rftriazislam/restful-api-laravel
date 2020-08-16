@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Person;
 class PersonController extends Controller
 {
-public function person(Person $id){
-
-    return $id;
+public function personStore( $id){
+    $p=Person::find($id);
+    return response()->json($p,200);
 }
 }
