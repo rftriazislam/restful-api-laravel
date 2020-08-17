@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/person-api-store/{id}','PersonController@personStore');
+Route::get('/person-api-store/{id}','PersonController@personShow');
+Route::post('/person-api-store','PersonController@personStore');
+
 
     
